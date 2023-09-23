@@ -1,0 +1,88 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><b>Movie Recommendation System <span class="webview">WebView</span></b></h1>
+        <h6>Powered by Machine Learning Algorithm with Python 3</h6></br>
+        <form action="/recommend" method="post">
+            <label for="title">Enter a Movie Title:</label></br>
+            <input type="text" name="title" placeholder="Enter Movie Name"></br></br>
+            <input type="submit" value="Submit" class="submit-button">
+        </form>
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script>
+        function changeInputField() {
+            var selectedOption = document.querySelector('input[name="searchType"]:checked').value;
+            var inputField = document.getElementById("searchInput");
+            inputField.placeholder = "Enter " + selectedOption;
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1><b>Movie Recommendation System <span class="webview">WebView</span></b></h1>
+            <h6>Powered by Machine Learning Algorithm with Python 3</h6><br>
+            <form action="/recommend" method="post">
+                <label><input type="radio" name="searchType" value="Movie Name" checked="checked" onclick="changeInputField()">Search by Movie Name</label><br>
+                <label><input type="radio" name="searchType" value="Movie_Ratings" onclick="changeInputField()">Search by Movie Name with Ratings</label><br>
+                <label><input type="radio" name="searchType" value="Movie Tags" onclick="changeInputField()">Search by Movie Tags</label><br>
+                <label><input type="radio" name="searchType" value="Ratings to Movie" onclick="changeInputField()">Search by Movie Ratings</label><br><br>
+                <input type="text" id="searchInput" name="title" placeholder="Default : `Movie Name`"><br><br>
+                <input type="submit" value="Submit" class="submit-button">
+            </form>
+        </div>
+    </main> 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    
+    <script>
+        function showLoader() {
+            var loaderContainer = document.getElementById("loader-container");
+            loaderContainer.style.display = "flex";
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1><b>Movie Recommendation System <span class="webview">WebView v2.3</span></b></h1>
+            <h6>Powered by Machine Learning Algorithm with Python 3</h6><br>
+            <form action="/recommend" method="post" onsubmit="showLoader()">
+                <label><input type="radio" name="searchType" value="Movie Name" checked="checked" onclick="changeInputField()">Search by Movie Name</label><br>
+                <label><input type="radio" name="searchType" value="Movie_Ratings" onclick="changeInputField()">Search by Movie Name with Ratings</label><br>
+                <label><input type="radio" name="searchType" value="Movie Tags" onclick="changeInputField()">Search by Movie Tags</label><br>
+                <label><input type="radio" name="searchType" value="Ratings to Movie" onclick="changeInputField()">Search by Movie Ratings</label><br><br>
+                <input type="text" id="searchInput" name="title" placeholder="Default: `Movie Name`"><br><br>
+                <input type="submit" value="Submit" class="submit-button">
+            </form>
+            <div id="loader-container" class="loader-container">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </main> 
+</body>
+</html>

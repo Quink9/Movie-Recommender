@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://repository-images.githubusercontent.com/275336521/20d38e00-6634-11eb-9d1f-6a5232d0f84f');
+    background-size: cover;
+    background-position: center;
+    /*background-blend-mode: hard-light;
+    filter: brightness(50%);*/
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh; /* Adjust the height as desired */
+    max-width: 400px; /* Set the maximum width of the box */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(244, 244, 244, 0.1);
+    padding: 20px 50px 20px 50px;
+    margin: auto;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: boxEntry 0.6s ease-in-out forwards;
+    -webkit-backdrop-filter:blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+@keyframes boxEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: slideIn 1s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+li {
+    font-size: 16px;
+    color: #efe9e9;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    opacity: 0; /* Set initial opacity to 0 */
+    transform: translateY(20px); /* Move items down by 20px */
+}
+
+li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+li::before {
+    content: ''; /* Remove the bullet content */
+    display: none; /* Hide the bullet */
+}
+
+@keyframes listEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li {
+    animation: listEntry 0.6s ease-in-out forwards;
+}
+
+li:hover {
+    color: #00625b;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-0%, -30%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

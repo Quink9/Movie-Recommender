@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Page</title>
+    <link rel="stylesheet" href="/static/styles1.css"/>
+</head>
+<body>
+    <main>
+    <div class="container">
+        <h1>Recommended Movies for "{{ title }}"</h1>
+        <ul>
+            {% for movie in movies %}
+            <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    </main>
+</body>
+</html>
